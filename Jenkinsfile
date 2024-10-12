@@ -10,7 +10,7 @@
 node(){
     stage('checkout'){
             git branch: 'develop'
-            credentialsId: 'Jenkins-privatekey'
+            credentialsId: '1d192c85-7a4a-4494-b009-d9ac77c3a8ec'
             url: 'https://github.com/abdulmusavvir/movies-store.git' 
     }
 }
