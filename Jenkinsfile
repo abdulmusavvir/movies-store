@@ -1,4 +1,14 @@
+
+// node(){
+//     stage ('checkout'){
+//         checkout scm
+//     }
+// }
+
+// customizing the git clone command to specific credentials and branch
+
 pipeline{
+    agent any // This allows the pipeline to run on any available agent
     stages{
         stage("checkout"){
             steps{
