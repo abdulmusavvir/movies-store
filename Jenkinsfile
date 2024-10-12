@@ -9,10 +9,8 @@
 
 node(){
     stage('checkout'){
-        steps{
             git branch: 'develop'
             credentialsId: 'Jenkins-privatekey'
-            url: 'https://github.com/abdulmusavvir/movies-store.git'   
-        }
+            url: 'https://github.com/abdulmusavvir/movies-store.git' 
     }
 }
