@@ -6,7 +6,7 @@ node(){
     }
     def imageTest = docker.build("${ImageName}-test","-f Dockerfile.test .")
     stage('Unit Test'){
-        imageTest.inside{
+        imageTest.inside(){
             sh 'npm run lint'
         }
     }
