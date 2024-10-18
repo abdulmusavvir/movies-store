@@ -14,7 +14,7 @@ node(){
         sh 'docker run --rm ${ImageName}-test npm run test'
     }
     stage ('Code Coverage'){
-        sh 'docker run --rm ${imageName}-test npm run coverage-text'
+        sh 'docker run --rm ${ImageName}-test npm run coverage-text'
     }
 }
 
