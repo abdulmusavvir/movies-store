@@ -11,6 +11,10 @@ node(){
         }
     }
     stage('Integration Test'){
-        sh 'docker run --rm ${ImageNmae}-test npm run test'
+        sh 'docker run --rm ${ImageName}-test npm run test'
+    }
+    stage ('Code Coverage'){
+        sh 'docker run --rm ${imageName}-test npm run coverage-text'
     }
 }
+
