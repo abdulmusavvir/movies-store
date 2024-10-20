@@ -1,9 +1,30 @@
+# FROM node:14.17.0
+
+# WORKDIR /app
+
+# COPY package-lock.json package.json .
+
+# RUN npm install
+
+# COPY . .
+
+
+
+
 FROM node:14.17.0
 
+# Set the working directory
 WORKDIR /app
 
-COPY package-lock.json package.json .
+# Copy package.json and package-lock.json to leverage Docker cache
+COPY package.json package-lock.json ./
 
+# Install all dependencies including dev dependencies (do not use --production)
 RUN npm install
 
+# Copy the rest of the application code
 COPY . .
+
+# Optionally, specify the command to start the application
+# CMD ["npm", "start"]
+
