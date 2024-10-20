@@ -14,7 +14,7 @@ node(){
         imageTest.inside{
             sh 'npm run test'
         }
-        sh 'docker run --rm ${imageName}-test npm run test'
+        // sh 'docker run --rm ${imageName}-test npm run test'
     }
     stage ('Code Coverage'){
         sh 'docker build -t ${ImageName}-test -f Dockerfile.test .'
